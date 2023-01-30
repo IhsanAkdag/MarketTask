@@ -1,0 +1,5 @@
+2023-01-30 22:55:35,505 INFO P.LoginPage [main] input email loginpage
+2023-01-30 22:55:35,737 INFO P.LoginPage [main] buton loginpage
+2023-01-30 22:55:36,878 INFO P.LoginPage [main] input password loginpage
+2023-01-30 22:55:37,043 INFO P.LoginPage [main] btn2 loginpage
+2023-01-30 22:55:53,573 INFO P.UserDashboardPage [main] User verify text test

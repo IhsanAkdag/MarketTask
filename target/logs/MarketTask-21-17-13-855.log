@@ -1,0 +1,5 @@
+2023-01-30 21:17:13,851 INFO i.g.b.w.WebDriverManager [main] Using chromedriver 103.0.5060.134 (resolved driver for Chrome 103)
+2023-01-30 21:17:13,895 INFO i.g.b.w.WebDriverManager [main] Exporting webdriver.chrome.driver as /Users/APPLE/.cache/selenium/chromedriver/mac64/103.0.5060.134/chromedriver
+2023-01-30 21:17:46,790 INFO P.MainPage [main] User go to https://www.hepsiburada.com/
+2023-01-30 21:17:50,573 INFO P.MainPage [main] User hover over giris yap buton
+2023-01-30 21:17:53,048 INFO P.MainPage [main] User click login buton
