@@ -1,0 +1,2 @@
+public class TC002 {
+}
