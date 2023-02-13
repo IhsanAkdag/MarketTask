@@ -1,7 +1,6 @@
 package Pages;
 
 import Base.BaseStepMethod;
-import Utilities.ConfigReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;

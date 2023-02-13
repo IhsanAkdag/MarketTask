@@ -1,6 +1,5 @@
 package Base;
 
-import Utilities.ConfigReader;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -266,7 +265,6 @@ public class BaseStepMethod {
         return currentDate;
 
     }
-
 
 
     protected String getTabTitle() {
