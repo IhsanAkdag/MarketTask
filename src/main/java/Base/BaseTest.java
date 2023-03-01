@@ -11,10 +11,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
@@ -41,13 +43,22 @@ public class BaseTest {
 
                 case "chrome":
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--incognito");
-                    options.addArguments("--start-maximized");
-                    options.addArguments("--ignore-certificate-errors");
+
+                    options.addArguments("--incognito"); //Chrome'u gizli modda açar
+//                  options.addArguments("--headless"); //Chrome'u headless modda açar
+                    options.addArguments("--start-maximized"); //Chrome'u büyütme modunda açar
+                    options.addArguments("--ignore-certificate-errors"); // Chrome'da sertifika hatasını atlar
                     options.addArguments("--allow-insecure-localhost");
-                    options.addArguments("--acceptInsecureCerts");
+                    options.addArguments("--acceptInsecureCerts"); // Guvensiz sertifikalari kabul eder
                     options.addArguments("--disable-blink-features=AutomationControlled");
-                    options.addArguments("--disable-extensions");
+                    options.addArguments("--disable-extensions"); // Chrome tarayıcıdaki mevcut uzantıları devre dışı bırakır
+                    options.addArguments("--disable-infobars"); // Chrome otomatik yazılım tarafından kontrol ediliyor" bildirimini görüntülemesini engeller
+
+                    // Chrome tarayıcısında reklam engelleyici uzantısının nasıl etkinleştirileceğini gösterir ,boylelikle reklam engellenir
+                    options.addExtensions(new File("/Users/APPLE/IdeaProjects/MerketTask/resources/extension_5_4_1_0.crx")); // crx dosyasinin yeri
+                    DesiredCapabilities capabilities = new DesiredCapabilities();
+                    capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(options);
                     break;
